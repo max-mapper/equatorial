@@ -1,0 +1,26 @@
+{
+  "name": "equatorial",
+  "version": "1.0.0",
+  "description": "degree <=> hms conversion functions for equatorial coordinates",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/equatorial.git"
+  },
+  "keywords": [
+    "astronomy",
+    "celestial"
+  ],
+  "bugs": {
+    "url": "https://github.com/maxogden/equatorial/issues"
+  },
+  "homepage": "https://github.com/maxogden/equatorial",
+  "devDependencies": {
+    "tape": "^3.0.1"
+  }
+}
