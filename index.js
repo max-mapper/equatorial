@@ -45,10 +45,14 @@ module.exports.raHms2Deg = function(ra, round) {
 module.exports.decHms2Deg = function(dec, round) {
   var parts = dec.split(':')
   var sign = 1
+  if (dec.toString()[0] === '-')
+  {
+    sign = -1
+  }
   var d = parseFloat(parts[0])
   var m = parseFloat(parts[1])
   var s = parseFloat(parts[2])
-  if (d.toString()[0] === '-') {
+  if (d.toString()[0] === '-' || sign == -1) {
     sign = -1
     d = Math.abs(d)
   }
