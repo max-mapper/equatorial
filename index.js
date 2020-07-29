@@ -29,10 +29,14 @@ module.exports.decDeg2Hms = function(dec, round) {
 module.exports.raHms2Deg = function(ra, round) {
   var parts = ra.split(':')
   var sign = 1
+  if (ra.toString()[0] === '-')
+  {
+    sign = -1
+  }
   var h = parseFloat(parts[0])
   var m = parseFloat(parts[1])
   var s = parseFloat(parts[2])
-  if (h.toString()[0] === '-') {
+  if (h.toString()[0] === '-' || sign == -1) {
     sign = -1
     h = Math.abs(h)
   }
